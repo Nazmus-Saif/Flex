@@ -5,11 +5,12 @@ Welcome to the Flex project! Follow the steps below to set up and run the Flex m
 Prerequisites
 Before you begin, ensure that you have the following installed on your computer:
 
-1. WampServer: A local server environment for Windows.
-    Installation Instructions
-    Download the Project
+# WampServer: A local server environment for Windows.
 
-Download the zip file containing the Flex project from the GitHub repository.
+# Installation Instructions
+    1. Download the Project
+
+        Download the zip file containing the Flex project from the GitHub repository.
 
 Extract the Files
 
