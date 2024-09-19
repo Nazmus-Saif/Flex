@@ -33,6 +33,12 @@ Before you begin, ensure that you have the following installed on your computer:
 
    - Open your web browser and type `http://localhost/[your_project_folder_name]` in the address bar, replacing `[your_project_folder_name]` with the name of the project folder you placed in the `www` directory.
    - You should now see the **Flex** movie and series streaming platform running on your local server.
+     
+5. **Create Virtual Host**
+
+   - Open your web browser and type `http://localhost` in the address bar, you will see `Add a Virtual Host in left down side`.
+   - Click the option you will see **virtual host name which you entered like xyz.com** then place the project path in the **complete absolute path** box.
+   - Project path is the path where the project you stored in **www** folder. 
 
 ## Additional Information
 
