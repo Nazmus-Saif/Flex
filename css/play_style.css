@@ -1,0 +1,254 @@
+* {
+  margin: 0;
+  font-family: Arial;
+}
+
+.header-bars {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  margin: 7px 0 0 70px;
+  color: #E8EAED;
+  font-size: 1.25rem;
+}
+
+.header-bars:hover {
+  cursor: pointer;
+}
+
+body {
+  overflow: auto;
+}
+
+.homepage-wrapper {
+  background-color: #232323;
+}
+
+/* design the scrollbar */
+body::-webkit-scrollbar {
+  width: 5px;
+  /* Adjust the width of the scrollbar as needed */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.5);
+  /* Change the color to your desired color */
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #232323;
+  /* Change the color of the track (the background behind the scrollbar) */
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.player-container {
+  margin: 20px 0 0 20px;
+  height: 79.4vh;
+  width: 97%;
+  background-color: #E8EAED;
+  border-radius: 11px;
+}
+
+video {
+  background-color: black;
+  width: 100%;
+  height: 79.4vh;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.movie-title {
+  display: flex;
+  align-items: center;
+  height: 60px;
+  width: 97%;
+  background-color: #232323;
+  color: #E8EAED;
+  font-size: 1.5rem;
+  box-sizing: border-box;
+  margin-left: 20px;
+}
+
+.discussion {
+  height: 420px;
+  width: 97%;
+  background-color: #232323;
+  margin-left: 20px;
+}
+
+.comment-box {
+  display: flex;
+  height: 100px;
+  width: 100%;
+  margin-top: 20px;
+  background-color: #232323;
+}
+
+.profile {
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.picture {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.picture img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.no-image-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightgray;
+  color: black;
+  border-radius: 50%;
+}
+
+.comment-input {
+  margin: 8px 0 0 15px;
+  height: 80px;
+  width: 95%;
+  background-color: #232323;
+}
+
+.comment-box input {
+  height: 35px;
+  width: 99.4%;
+}
+
+.comment-box input[type="text"] {
+  border: none;
+  border-bottom: 1px solid transparent;
+  outline: none;
+  background-color: transparent;
+  transition: border-color 0.3s;
+  color: #E8EAED;
+  /* Text color */
+}
+
+.comment-box input[type="text"]::placeholder {
+  color: #999999;
+}
+
+.comment-box input[type="text"]:focus {
+  border-bottom: 1px solid #E8EAED;
+}
+
+.comment-box button {
+  position: absolute;
+  height: 30px;
+  width: 90px;
+  border-radius: 20px;
+  background-color: #F74366;
+  border: none;
+  font-size: .85rem;
+  font-weight: bold;
+  right: 0;
+  margin: 50px 21px 0 0;
+}
+
+.comment-box button:hover {
+  cursor: pointer;
+}
+
+/* comments show css starts */
+.comments-show {
+  height: 300px;
+  width: 100%;
+  background-color: #232323;
+  color: black;
+  overflow-y: auto;
+  color: #E8EAED;
+  margin-top: 20px;
+}
+
+/* design the scrollbar */
+.comments-show::-webkit-scrollbar {
+  width: 5px;
+  /* Adjust the width of the scrollbar as needed */
+}
+
+.comments-show::-webkit-scrollbar-thumb {
+  background-color: #232323;
+  /* Change the color to your desired color */
+  border-radius: 10px;
+}
+
+.comments-show::-webkit-scrollbar-track {
+  background-color: #232323;
+  /* Change the color of the track (the background behind the scrollbar) */
+}
+
+.comments-show::-webkit-scrollbar-thumb:hover {
+  background-color: #232323;
+}
+
+.comment:last-child {
+  margin-bottom: 0;
+  /* Remove margin from the last comment to prevent extra space */
+}
+
+.comment-container {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 25px;
+}
+
+.user-profile-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+  overflow: hidden;
+}
+
+.user-profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.comment-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.user-details {
+  display: flex; /* New container for user name and comment date */
+  align-items: center; /* Vertically center user name and comment date */
+}
+
+.user-name {
+  font-size: .8rem;
+  color: #E8EAED;
+}
+
+.comment-date {
+  font-size: .8rem;
+  color: #E8EAED;
+  margin-left: 10px; /* Add some space between user name and comment date */
+}
+
+.comment-text {
+  margin-top: 5px;
+}
+
+
+/* comments show css ends */

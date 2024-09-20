@@ -1,0 +1,1 @@
+all the media file of this project is stored in this folder

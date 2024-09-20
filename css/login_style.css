@@ -1,0 +1,225 @@
+* {
+  margin: 0;
+  font-family: Arial;
+}
+
+/* design for full body background */
+.full-body {
+  position: relative;
+  /* Add this to make it a positioning context */
+  height: 100vh;
+  width: 100%;
+  background-image: url(../media/images/signin_signup_background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* to fit the bg image with the div size */
+  background-attachment: fixed;
+  /* it is used so that when we scroll the backgroud image remains statix */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* this gives column so that error message and login box show in a column */
+} 
+
+/* Create the black transparent overlay */
+.full-body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Adjust the alpha value for transparency */
+  z-index: 1;
+  /* Place it behind other content */
+}
+
+/* header part css starts here */
+.head {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  z-index: 2;
+}
+
+.logo {
+  margin: 10px 0 0 150px;
+}
+
+.logo a {
+  font-size: 3rem;
+  text-align: left;
+  /* Center the logo horizontally */
+  height: 100px;
+  width: 200px;
+  text-decoration: none;
+  color: red;
+}
+
+/* Add the following CSS rules for the signup button */
+.signup {
+  position: absolute;
+  top: 0;
+  right: 170px;
+  /* Adjust the right distance as needed */
+  margin-top: 20px;
+}
+
+.signup button {
+  height: 35px;
+  width: auto;
+  /* Allow the button width to adapt to its content */
+  padding: 0 15px;
+  /* Add some padding for better appearance */
+  border: none;
+  border-radius: 5px;
+  background-color: red;
+  text-decoration: none;
+  color: #E8EAED;
+}
+
+.signup a {
+  text-decoration: none;
+  color: #E8EAED;
+  font-size: .9rem;
+}
+
+.signup :hover {
+  background-color: #D21404;
+  cursor: pointer;
+}
+
+.signup :active {
+  cursor: auto;
+  background-color: #D21404;
+}
+
+/* header part css ends here */
+
+
+/* error message if log in failed */
+.error-message{
+  z-index: 10;
+  color: red;
+  font-weight: bold;
+}
+
+/* ceter login container desing*/
+.login-container {
+  margin-top: 30px;
+  position: relative;
+  height: 370px;
+  /* Increase the height */
+  width: 400px;
+  /* Increase the width */
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 0.5px solid black;
+  border-radius: 10px;
+  text-align: center;
+  color: #E8EAED;
+  padding: 20px;
+  z-index: 2;
+}
+
+.login-container h2 {
+  font-size: 2rem;
+  /* Adjust the font size of the title */
+  margin-bottom: 15px;
+  /* Add margin at the bottom of the title */
+}
+
+.login-box input {
+  color: #E8EAED;
+  margin-top: 10px;
+  height: 20px;
+  width: calc(390px - 10px);
+  /* Adjust width to compensate for padding */
+  border: 0.5px solid black;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  padding: 15px 10px;
+  /* Adjust padding for the text indentation */
+  background-color: #444444;
+  margin-left: -2px;
+  /* Add a negative margin to compensate for the padding */
+}
+
+input::placeholder {
+  color: #E8EAED;
+  text-indent: 2px;
+  /* Adjust the value to move the placeholder text to the right */
+}
+
+.login-box button {
+  margin-top: 25px;
+  color: #E8EAED;
+  height: 35px;
+  width: 100%;
+  background-color: red;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* signup design for new user */
+.signup-box button {
+  height: 35px;
+  width: 100%;
+  border: 0.2px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  background-color: #444444;
+}
+
+.signup-box a {
+  text-decoration: none;
+  color: #E8EAED;
+}
+
+.login-box button:hover {
+  background-color: green;
+}
+
+.login-box button:active {
+  background-color: green;
+  border: 1px solid;
+  cursor: auto;
+}
+
+.signup-box p {
+  font-size: 0.85rem;
+  margin-top: 50px;
+}
+
+/* Footer Starts*/
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  /* Adjust the height as needed to create the gap from bottom*/
+  color: #E8EAED;
+  text-align: center;
+  z-index: 2;
+  /* Make sure the z-index is higher than other content */
+  display: block;
+  /* to show content in separate line*/
+  justify-content: center;
+  align-items: center;
+}
+
+.footer a {
+  text-decoration: underline;
+  color: #E8EAED;
+}
+
+.footer span{
+  font-size: .9rem;
+}
+/* Footer Ends */

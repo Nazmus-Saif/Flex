@@ -1,0 +1,470 @@
+* {
+  margin: 0;
+  font-family: Arial;
+}
+
+.header-bars {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  margin: 0 0 0 60px;
+  color: #E8EAED;
+  font-size: 1.25rem;
+}
+
+.header-bars:hover {
+  cursor: pointer;
+}
+
+body {
+  overflow-y: auto;
+}
+
+/* design the scrollbar */
+body::-webkit-scrollbar {
+  width: 5px;
+  /* Adjust the width of the scrollbar as needed */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.5);
+  /* Change the color to your desired color */
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #232323;
+  /* Change the color of the track (the background behind the scrollbar) */
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Homepage Wrapper body css Starts */
+.homepage-wrapper {
+  position: relative;
+  background-color: #232323;
+}
+
+
+/* Image Slider Starts*/
+.slider-wrapper {
+  margin: 25px 0 0 70px;
+}
+
+.slider-wrapper h2 {
+  position: absolute;
+  color: #E8EAED;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  height: 35px;
+  width: 210px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+}
+
+/* adjust the size of the slider */
+.slider {
+  width: 800px;
+  max-width: 100%;
+  height: 500px;
+  border-radius: 10px;
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+/* gap between images */
+.slides {
+  width: 500%;
+  height: 500px;
+  display: flex;
+}
+
+.slides input {
+  display: none;
+}
+
+/* size of the images */
+.slide {
+  width: 20%;
+  transition: 2s;
+}
+
+/* to fit the image with slider */
+.slide img {
+  width: 800px;
+  max-width: 100%;
+  height: 500px;
+  transition: all 0.5s;
+}
+
+.slide img:hover{
+  transform: scale(1.05);
+}
+
+/* Automatic Image Sliding Starts*/
+#radio1:checked~.first {
+  margin-left: 0;
+}
+
+#radio2:checked~.first {
+  margin-left: -20%;
+}
+
+#radio3:checked~.first {
+  margin-left: -40%;
+}
+
+#radio4:checked~.first {
+  margin-left: -60%;
+}
+
+#radio5:checked~.first {
+  margin-left: -80%;
+}
+
+/* Automatic Radio Button Highlight */
+.navigation-auto {
+  position: absolute;
+  display: flex;
+  width: 800px;
+  justify-content: center;
+  margin-top: 460px;
+  /* give space from top of the page */
+}
+
+.navigation-auto div {
+  border: 2px solid red;
+  padding: 5px;
+  /* to look like a ring*/
+  border-radius: 50%;
+  transition: 1s;
+  /* transition speed of the red color (how fast appears the color) */
+}
+
+.navigation-auto div:hover{
+  cursor: pointer;
+}
+
+.navigation-auto div:active{
+  cursor: auto;
+}
+
+/* to give space beween 4 circles */
+.navigation-auto div:not(:last-child) {
+  margin-right: 40px;
+}
+
+/* to change the background color after each movement */
+#radio1:checked~.navigation-auto .auto-btn1 {
+  background: red;
+}
+
+#radio2:checked~.navigation-auto .auto-btn2 {
+  background: red;
+}
+
+#radio3:checked~.navigation-auto .auto-btn3 {
+  background: red;
+}
+
+#radio4:checked~.navigation-auto .auto-btn4 {
+  background: red;
+}
+
+#radio5:checked~.navigation-auto .auto-btn5 {
+  background: red;
+}
+
+/* Image Slider Ends*/
+
+/* Genres CSS Stars*/
+/* CSS for Movies shows by Genre Sections Starts*/
+.movie-list {
+  margin: 40px 0 20px 0;
+  display: flex;
+  /* Display children in a row */
+  flex-direction: column;
+  gap: 5px;
+  /* Adjust the gap between genre sections */
+}
+
+/* if we remove this there is a bule desh seen right bottom of the movie image */
+.movies {
+  display: flex;
+  justify-content: center;
+}
+
+/* for getting zoom effect of each cover */
+.result-image {
+  position: relative;
+  /* position: relative and overflow: hidden are used to ensure that the zoom effect doesn't cause layout issues */
+  overflow: hidden;
+  transition: transform 0.4s ease;
+  /* Add a smooth transition effect */
+  margin: 9px;
+  width: 230px;
+  /* hight and width of the particular image */
+  height: 325px;
+  border-radius: 10px;
+  margin-top: 12px;
+}
+
+.result-image:hover {
+  transform: scale(1.07);
+  /* Increase the scale to create a zoom effect */
+}
+
+.movie-list h3 {
+  color: #E8EAED;
+  text-align: center;
+  /* Center align content */
+  font-size: 1.5rem;
+}
+
+.genre-section {
+  display: flex;
+  flex-direction: row;
+  /* Display movies in a row horizontally */
+  background-color: none;
+  width: 91%;
+  height: 344px;
+  /* Use max-height for constraining the section height */
+  overflow: hidden;
+  white-space: nowrap;
+  /* Prevent movies from wrapping to a new line */
+  margin: 0 0 30px 60px;
+  padding-bottom: 6px;
+  /* give a little gap between the moview cover and the scrolbar */
+  border-radius: 10px;
+}
+
+/* CSS for scroll buttons */
+.scroll-button {
+  background-color: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 5px;
+  z-index: 100;
+  height: 320px;
+  /* height of buttons */
+  color: none;
+  /* Initially hide the buttons */
+  transition: opacity 0.1s ease;
+  /* Add a smooth transition effect */
+  margin-top: 15px;
+}
+
+/* Show the buttons on hover */
+.scroll-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.scroll-button:active {
+  cursor: auto;
+}
+
+.left-button {
+  left: 0;
+  position: absolute;
+  margin-left: 40px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.right-button {
+  right: 0;
+  position: absolute;
+  margin-right: 40px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.see-more button {
+  position: absolute;
+  right: 0;
+  margin: 17px 70px 0 0;
+  z-index: 100;
+  background-color: #D21404;
+  color: #E8EAED;
+  border: 1px solid black;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.see-more button:hover {
+  cursor: pointer;
+}
+
+.see-more button:active {
+  cursor: auto;
+}
+
+.no-movies {
+  margin: auto;
+  color: #E8EAED;
+  font-size: 1.25rem;
+}
+
+/* CSS for Movies shows by Genre Sections Ends */
+
+/* top arrow button */
+.top-arrow{
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  position: fixed;
+  z-index: 200;
+  border: none;
+  background-color: bisque;
+  color: black;
+  font-size: 1.25rem;
+  bottom: 0;
+  right: 0;
+  margin: 0 8px 10px 0;
+  display: none;
+}
+.top-arrow:hover{
+  cursor: pointer;
+}
+
+.top-arrow:active{
+  cursor: auto;
+  background-color: rgb(212, 163, 97);
+}
+
+
+
+
+
+
+
+
+/* css for live chat starts */
+.live-chat {
+  position: absolute;
+  background-color: #232323;
+  height: 497px;
+  width: 350px;
+  z-index: 100;
+  right: 0;
+  margin: 25px 70px 0 0;
+  border-radius: 10px;
+  border: 1px solid #141414;
+}
+
+/* top left bar */
+.fa-bars {
+  position: absolute;
+  z-index: 100;
+  color: #E8EAED;
+  margin: 8px 0 0 10px;
+}
+
+.fa-bars:hover {
+  cursor: pointer;
+}
+
+.fa-bars:active {
+  cursor: auto;
+}
+
+.live-chat h3 {
+  position: absolute;
+  z-index: 100;
+  right: 0;
+  color: #E8EAED;
+  margin: 8px 10px 0 0;
+}
+
+/* div for all chat shows */
+.all-chat {
+  position: absolute;
+  z-index: 100;
+  height: 390px;
+  width: 325px;
+  background-color: #141414;
+  color: #E8EAED;
+  margin: 45px 0 0 12px;
+  border-radius: 10px;
+}
+
+/* message write box */
+.input-box {
+  position: absolute;
+  font-size: 0.9rem;
+  bottom: 0;
+  border-radius: 5px;
+  border: none;
+  padding: 5px;
+  /* Add padding inside the input box */
+  background-color: #141414;
+  color: #E8EAED;
+  width: 280px;
+  height: 21px;
+  margin: 0 0 10px 10px;
+  /* give margin to the input box */
+}
+
+/* send button */
+.send {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 1.4rem;
+  margin: 0 9px 12px 0;
+  background-color: #eb2f06;
+  border: none;
+  border-radius: 3px;
+}
+
+.send:hover {
+  cursor: pointer;
+}
+
+.send:active {
+  cursor: auto;
+}
+
+/* css for live chat ends */
+
+
+@media (max-width: 600px) {
+
+  .homepage-wrapper {
+    height: auto;
+    min-width: 411px;
+  }
+
+  .slider-wrapper {
+    display: none;
+  }
+
+  .live-chat {
+    display: none;
+  }
+
+  .scroll-button {
+    background-color: none;
+    height: 50px;
+    margin: 75px 0 0 -5px;
+    z-index: 100;
+  }
+
+  .genre-section {
+    height: auto;
+    margin-left: 15px;
+    margin-bottom: 0px;
+  }
+
+  .result-image {
+    height: 170px;
+    width: 108px;
+  }
+}

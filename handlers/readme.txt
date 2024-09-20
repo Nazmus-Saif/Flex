@@ -1,0 +1,1 @@
+these all php file of this folder are used in main pages to get things from database

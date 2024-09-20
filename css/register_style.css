@@ -1,0 +1,226 @@
+* {
+  margin: 0;
+  font-family: Arial;
+}
+
+/* design for full body background */
+.full-body {
+  position: relative;
+  /* Add this to make it a positioning context */
+  height: 100vh;
+  width: 100%;
+  background-image: url(../media/images/signin_signup_background.jpg);
+  background-repeat: no-repeat;
+  /* to fit the bg image with the div size */
+  background-attachment: fixed;
+  /* it is used so that when we scroll the backgroud image remains statix */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Create the black transparent overlay */
+.full-body::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Adjust the alpha value for transparency */
+  z-index: 1;
+  /* Place it behind other content */
+}
+
+/* header part css starts here */
+.head {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  z-index: 2;
+}
+
+.logo {
+  margin: 10px 0 0 150px;
+}
+
+.logo a {
+  font-size: 3rem;
+  text-align: left;
+  /* Center the logo horizontally */
+  height: 100px;
+  width: 200px;
+  text-decoration: none;
+  color: red;
+}
+
+/* Add the following CSS rules for the signin button */
+.signin {
+  position: absolute;
+  top: 0;
+  right: 170px;
+  /* Adjust the right distance as needed */
+  margin-top: 20px;
+}
+
+.signin button {
+  height: 35px;
+  width: auto;
+  /* Allow the button width to adapt to its content */
+  padding: 0 15px;
+  /* Add some padding for better appearance */
+  border: none;
+  border-radius: 5px;
+  background-color: red;
+  text-decoration: none;
+  color: #E8EAED;
+}
+
+.signin :hover {
+  background-color: #D21404;
+  cursor: pointer;
+}
+
+.signin :active {
+  cursor: auto;
+  background-color: #D21404;
+}
+
+/* header part css ends here */
+
+.signin a {
+  text-decoration: none;
+  color: #E8EAED;
+  font-size: .9rem;
+}
+
+
+/* alert message css */
+.alert-message {
+  z-index: 10;
+  font-weight: bold;
+  color: red;
+  margin-bottom: 10px;
+}
+
+
+/* center login container desing*/
+.signup-container {
+  position: relative;
+  height: 470px;
+  /* Increase the height */
+  width: 410px;
+  /* Increase the width */
+  background-color: rgba(0, 0, 0, 0.7);
+  border: 1px solid black;
+  border-radius: 10px;
+  text-align: center;
+  color: #E8EAED;
+  padding: 10px;
+  z-index: 2;
+  margin-bottom: 10px;
+}
+
+.signup-box input {
+  color: #E8EAED;
+  margin-top: 5px;
+  height: 20px;
+  width: calc(395px - 10px);
+  /* Adjust width to compensate for padding */
+  border: 0.5px solid black;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  padding: 15px 10px;
+  /* Adjust padding for the text indentation */
+  background-color: #232323;
+  margin-left: -2px;
+  /* Add a negative margin to compensate for the padding */
+}
+
+.signup-box label {
+  font-size: 0.82rem;
+  display: flex;
+  margin: 5px 0 0 5px;
+}
+
+input::placeholder {
+  color: #E8EAED;
+  text-indent: 2px;
+  /* Adjust the value to move the placeholder text to the right */
+}
+
+.signup-box button {
+  margin-top: 10px;
+  color: #E8EAED;
+  height: 35px;
+  width: 405px;
+  background-color: red;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* signin design for old user */
+.signin-box button {
+  height: 35px;
+  width: 405px;
+  border: 0.2px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 5px;
+  background-color: #232323;
+}
+
+.signup-box a {
+  text-decoration: none;
+  color: #E8EAED;
+}
+
+.signup-box button:hover {
+  background-color: green;
+}
+
+.signin-box button:active {
+  background-color: green;
+  border: 1px solid;
+  cursor: auto;
+}
+
+.signin-box p {
+  font-size: 0.85rem;
+  margin-top: 15px;
+}
+
+/* Footer Starts*/
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  /* Adjust the height as needed to create the gap from bottom*/
+  color: #E8EAED;
+  text-align: center;
+  z-index: 2;
+  /* Make sure the z-index is higher than other content */
+  display: block;
+  /* to show content in separate line*/
+  justify-content: center;
+  align-items: center;
+}
+
+.footer a {
+  text-decoration: underline;
+  color: #E8EAED;
+}
+
+.footer span {
+  font-size: .9rem;
+}
+
+/* Footer Ends */

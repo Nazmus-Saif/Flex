@@ -1,0 +1,569 @@
+* {
+  margin: 0;
+  font-family: Arial;
+}
+
+body {
+  overflow-y: auto;
+}
+
+/* design the scrollbar */
+body::-webkit-scrollbar {
+  width: 5px;
+  /* Adjust the width of the scrollbar as needed */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.5);
+  /* Change the color to your desired color */
+  border-radius: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #232323;
+  /* Change the color of the track (the background behind the scrollbar) */
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.header-bars {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  margin: 7px 0 0 70px;
+  color: #E8EAED;
+  font-size: 1.25rem;
+}
+
+.header-bars {
+  cursor: pointer;
+}
+
+/* body parts css starts */
+
+/* admin profile box starts */
+.admin-box {
+  display: flex;
+  height: 80.1vh;
+  max-width: 100%;
+  background-color: #232323;
+}
+
+/* size of the admin-profile div */
+.admin-profile {
+  position: relative;
+  height: 100%;
+  width: 200px;
+  background-color: #232323;
+  color: #E8EAED;
+}
+
+.profile-header i {
+  font-size: 6rem;
+}
+
+.profile-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  top: 30px;
+}
+
+/* admin rank margin */
+.rank {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: #4a69bd;
+  font-weight: 700;
+  margin: 10px 0 0 0;
+}
+
+.rank p {
+  color: #079992;
+  font-size: 1rem;
+  margin: 3px 0 0 0;
+}
+
+/* give margin the full task container */
+.task-container {
+  margin-top: 50px;
+}
+
+.task-container a {
+  text-decoration: none;
+}
+
+/* individual ul div desing */
+.task-container ul div {
+  display: flex;
+  color: #E8EAED;
+  list-style-type: none;
+  padding: 10px 10px;
+  margin: 3px 10px 0 -30px;
+}
+
+/* icon design */
+.task-container ul div i {
+  /* Add padding to the icon to create space between the icon and text */
+  padding-right: 20px;
+  margin-left: 20px;
+}
+
+.task-container ul div:hover {
+  background-color: #333333;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.task-container ul div:active {
+  cursor: auto;
+}
+
+/* admin profile css ends */
+
+/* alert message css */
+.alert-message {
+  color: red;
+  height: 50px;
+  width: 400px;
+  position: absolute;
+  z-index: 200;
+  margin: 230px 0 0 150px;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.alert-message p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
+/* admin tasks css starts */
+.admin-task {
+  height: auto;
+  width: 1155px;
+  background-color: #232323;
+  display: flex;
+  justify-content: right;
+}
+
+.top-views {
+  height: 95%;
+  width: 700px;
+  margin-top: 12px;
+  background-color: #303030;
+  border-radius: 10px;
+  margin-right: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+}
+
+.top-views-today {
+  height: 40px;
+  width: 98%;
+  background-color: #4ab5bd;
+  margin: 5px 0 0 7px;
+  border-radius: 10px;
+  color: #E8EAED;
+}
+
+.top-views-today p {
+  font-weight: bold;
+  margin: 10px 0 0 5px;
+}
+
+.result-table {
+  height: 400px;
+  width: 98%;
+  background-color: #303030;
+  margin: 10px 0 0 7px;
+  border: 1px solid #141414;
+}
+
+/* Style for the table */
+.result-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Style for the table header (Title) */
+.result-table table th {
+  background-color: #141414;
+  color: #E8EAED;
+  height: 30px;
+  width: 40%;
+}
+
+
+/* this control each span in grid-item */
+.grid-item {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  height: 95%;
+  width: 440px;
+  background-color: #303030;
+  margin-top: 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+/* this control the inside item in each span */
+.grid-item span {
+  margin-top: 13px;
+  transition: all 0.1s;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* this gives a hover effect for each span */
+.grid-item span:hover {
+  transform: scale(1.02);
+}
+
+/* this target the p on each span */
+.grid-item div p {
+  font-size: 1rem;
+}
+
+/* this also control the inside item in each span */
+.dashboard {
+  align-items: center;
+  justify-content: center;
+  height: 90px;
+  width: 200px;
+  background-color: rgb(113, 219, 193);
+  border-radius: 10px;
+}
+
+/* this control the icon div in each span */
+.sign1,
+.sign2,
+.sign3,
+.sign4,
+.sign5,
+.sign6,
+.sign7,
+.sign8 {
+  height: 83px;
+  min-width: 85px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  margin-right: 20px;
+  /* this gives margin the icon div from the text */
+}
+
+.sign1 i,
+.sign2 i,
+.sign3 i,
+.sign4 i,
+.sign5 i,
+.sign6 i,
+.sign7 i,
+.sign8 i {
+  margin-left: 10px;
+}
+
+.sign1 {
+  background-color: rgb(30, 196, 196);
+}
+
+.sign2 {
+  background-color: rgb(38, 180, 33);
+}
+
+.sign3 {
+  background-color: rgb(173, 62, 62);
+}
+
+.sign4 {
+  background-color: rgb(202, 59, 178);
+}
+
+.sign5 {
+  background-color: rgb(57, 185, 207);
+}
+
+.sign6 {
+  background-color: rgb(40, 113, 173);
+}
+
+.sign7 {
+  background-color: rgb(61, 163, 112);
+}
+
+.sign8 {
+  background-color: rgb(158, 109, 54);
+}
+
+/* this control the size of text in each div */
+.dashboard div {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+/* this control the size of icon in each div */
+.dashboard i {
+  padding-right: 10px;
+  font-size: 3rem;
+}
+
+/* this target the text in each span */
+.total {
+  text-align: right;
+}
+
+.total p {
+  text-align: right;
+}
+
+/* this is because of some span space evenly not give accurate space because of font lenght */
+.grp1-sign {
+  margin-right: 44px;
+}
+
+.grp2-sign {
+  margin-right: 48px;
+}
+
+.grp3-sign {
+  margin-right: 58px;
+}
+
+/* list function css starts */
+.movie-list,
+.user-list,
+.categories,
+.comment-list {
+  position: absolute;
+  width: 688px;
+  height: 453px;
+  left: 0;
+  margin: 18px 0 0 205px;
+  display: none;
+}
+
+/* this line is related to javascript */
+.movie-list.active,
+.add-movie.active,
+.add-user.active,
+.user-list.active,
+.categories.active,
+.account-box.active,
+.comment-list.active {
+  display: block;
+  z-index: 500;
+}
+
+.add-movie h2,
+.add-user h2,
+.account-box h2 {
+  position: absolute;
+  color: #E8EAED;
+  margin: 20px 0 0 10px;
+}
+
+.all-movies,
+.all-users,
+.all-category,
+.all-comments {
+  position: absolute;
+  width: 688px;
+  height: 453px;
+  background-color: #303030;
+  overflow-y: auto;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+}
+
+/* design the scrollbar */
+.all-movies::-webkit-scrollbar,
+.all-users::-webkit-scrollbar,
+.all-comments::-webkit-scrollbar {
+  width: 5px;
+  /* Adjust the width of the scrollbar as needed */
+}
+
+.all-movies::-webkit-scrollbar-thumb,
+.all-users::-webkit-scrollbar-thumb,
+.all-comments::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.7);
+  /* Change the color to your desired color */
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.all-movies::-webkit-scrollbar-track,
+.all-users::-webkit-scrollbar-track,
+.all-comments::-webkit-scrollbar-track {
+  background-color: #141414;
+  /* Change the color of the track (the background behind the scrollbar) */
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.all-movies::-webkit-scrollbar-thumb:hover,
+.all-users::-webkit-scrollbar-thumb:hover,
+.all-comments::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* table design */
+.movie-list table,
+.user-list table,
+.categories table,
+.comment-list table {
+  width: 100%;
+  /* Make the table occupy the full width of the div */
+  border-collapse: collapse;
+  /* Collapse table borders */
+}
+
+/* Optional: Define styles for table header cells */
+.movie-list th,
+.user-list th,
+.categories th,
+.comment-list th {
+  background-color: #141414;
+  /* Header background color */
+  color: #E8EAED;
+  /* Header text color */
+  padding: 8px;
+  /* Header cell padding */
+  text-align: left;
+  /* Header text alignment */
+}
+
+/* Optional: Define styles for table data cells */
+.movie-list td,
+.user-list td,
+.categories td,
+.comment-list td {
+  padding: 8px;
+  /* Data cell padding */
+  border-bottom: 0;
+  /* Remove the bottom border to make it flat */
+  color: #E8EAED;
+}
+
+/* Define styles for even table data cells */
+.movie-list tr:nth-child(even),
+.user-list tr:nth-child(even),
+.categories tr:nth-child(even),
+.comment-list tr:nth-child(even) {
+  background-color: #333333;
+  /* Background color for even rows */
+}
+
+/* Define styles for odd table data cells */
+.movie-list tr:nth-child(odd),
+.user-list tr:nth-child(odd),
+.categories tr:nth-child(odd),
+.comment-list tr:nth-child(odd) {
+  background-color: #232323;
+  /* Background color for odd rows */
+}
+
+.add-movie-button,
+.add-user-button {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 35px;
+  width: 150px;
+  color: #E8EAED;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #eb2f06;
+}
+
+.add-movie-button:hover,
+.add-user-button:hover {
+  background-color: green;
+}
+
+.add-movie,
+.add-user,
+.account-box {
+  position: absolute;
+  right: 0;
+  margin: 18px 17px 0 0;
+  height: 455px;
+  width: 431px;
+  background-color: #141414;
+  border-radius: 10px;
+  display: none;
+}
+
+.add-movie-form input,
+.register-box-form input,
+.account-box-form input {
+  color: #E8EAED;
+  margin: 10px 0 0 10px;
+  height: 20px;
+  width: 90%;
+  /* Adjust width to compensate for padding */
+  border: 0.5px solid black;
+  border-radius: 5px;
+  padding: 12px 12px 12px 12px;
+  /* Adjust padding for the text indentation */
+  background-color: #232323;
+}
+
+.add-movie-form input::placeholder,
+.register-box-form input::placeholder,
+.account-box-form input::placeholder {
+  color: #E8EAED;
+  text-indent: 2px;
+  /* Adjust the value to move the placeholder text to the right */
+}
+
+.add-movie-form label,
+.register-box-form label,
+.account-box-form label {
+  color: #E8EAED;
+  font-size: 0.7rem;
+  margin: 12px 0 0 12px;
+  display: block;
+  /* Display labels as block elements to appear on a new line */
+}
+
+.add-user button,
+.add-movie button,
+.account-box button {
+  position: absolute;
+  right: 0;
+  margin: 15px 10px 0 0;
+  height: 35px;
+  width: 150px;
+  color: #E8EAED;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #eb2f06;
+}
+
+.add-user button:hover,
+.add-movie button:hover,
+.account-box button:hover {
+  background-color: green;
+}
+
+.nothing-found{
+  padding: 20px;
+  text-align: center;
+  font-size: 18px;
+  color: #333;
+  margin-top: 20px;
+  color: #E8EAED;
+}

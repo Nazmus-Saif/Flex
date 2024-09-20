@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    font-family: Arial;
+}
+
+body {
+    overflow-y: auto;
+  }
+  
+  /* design the scrollbar */
+  body::-webkit-scrollbar {
+    width: 5px;
+    /* Adjust the width of the scrollbar as needed */
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.5);
+    /* Change the color to your desired color */
+    border-radius: 10px;
+  }
+  
+  body::-webkit-scrollbar-track {
+    background-color: #232323;
+    /* Change the color of the track (the background behind the scrollbar) */
+  }
+  
+  body::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+
+.header-bars {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    margin: 7px 0 0 70px;
+    color: #E8EAED;
+    font-size: 1.25rem;
+}
+
+.header-bars:hover{
+    cursor: pointer;
+}
+
+.account-box {
+    height: 80.1vh;
+    width: 100%;
+    background-color: #232323;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.account-box h3 {
+    display: flex;
+    justify-content: center;
+    color: #E8EAED;
+    font-size: 1.6rem;
+    /* Adjust the font size of the title */
+    margin-bottom: 15px;
+    /* Add margin at the bottom of the title */
+}
+
+.account-box input {
+    color: #E8EAED;
+    margin-top: 10px;
+    height: 20px;
+    width: calc(390px - 10px);
+    /* Adjust width to compensate for padding */
+    border: 0.5px solid black;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    padding: 7px 0 7px 7px;
+    background-color: #232323;
+    margin-left: -2px;
+    /* Add a negative margin to compensate for the padding */
+}
+
+.account-box label{
+    color: #E8EAED;
+    display: block;
+    font-size: .8rem;
+}
+
+input::placeholder {
+    color: #E8EAED;
+    text-indent: 2px;
+    /* Adjust the value to move the placeholder text to the right */
+}
+
+.account-box button {
+    height: 35px;
+    width: 100%;
+    border: 0.2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    background-color: red;
+    color: #E8EAED;
+}
+
+.account-box a {
+    text-decoration: none;
+    color: #E8EAED;
+}
+
+.account-box button:hover {
+    background-color: green;
+}
